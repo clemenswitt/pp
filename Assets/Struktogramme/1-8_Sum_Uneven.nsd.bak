@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.32-23" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="clemenswitt" created="2024-10-14" changedby="clemenswitt" changed="2024-10-14" origin="Structorizer 3.32-23" text="&#34;sum_uneven_n(n):&#34;" comment="&#34;&#34;" color="ffffff" type="sub" style="nice">
+	<children color="ffffff">
+	</children>
+</root>

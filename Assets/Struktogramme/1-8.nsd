@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.32-23" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="clemenswitt" created="2024-10-14" changedby="clemenswitt" changed="2024-10-14" origin="Structorizer 3.32-23" text="&#34;Aufgabe 1.8&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<for text="&#34;foreach value in test_values&#34;" comment="" counterVar="value" startValue="" stepConst="" style="TRAVERSAL" insep="in" color="ffffff" disabled="0">
+			<qFor>
+				<call text="&#34;print(f&#34;&#34;Alle n: {sum_all_n(value)},   Ungerade n: {sum_uneven_n(value)},   VZ-Wechsel: {sum_all_n_alternating_sign(value)}&#34;&#34;)&#34;" comment="" color="ffffff" disabled="0" ismethoddecl="0"></call>
+			</qFor>
+		</for>
+	</children>
+</root>
