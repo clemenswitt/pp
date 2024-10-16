@@ -20,4 +20,3 @@ Repository zu den Übungsaufgaben aus der Lehrveranstaltung "Programmierparadigm
 - **Repository updaten:**
   - Ordner in VSCode öffnen – `Terminal -> Neues Terminal`
   - Im Terminal `git pull` ausführen
-å
