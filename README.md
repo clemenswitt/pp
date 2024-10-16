@@ -11,3 +11,13 @@ Repository zu den Übungsaufgaben aus der Lehrveranstaltung "Programmierparadigm
 3. Adresse dieses Repositories ([https://github.com/clemenswitt/pp](https://github.com/clemenswitt/pp)) in die Adresszeile einfügen
 4. Zu öffnende Übungsaufgabe aus der Liste auswählen
 - **Hinweis:** Zur Ausführung der geöffneten Notebooks ist die Anmeldung mit einem Google-Konto erforderlich 
+
+### Jupyter-Notebooks lokal in VSCode ausführen
+1. Jupyter installieren – [Anleitung](https://www.youtube.com/watch?v=h1sAzPojKMg)
+2. Übungs-Repository klonen: `git clone https://github.com/clemenswitt/pp.git`
+3. Notebook (`.ipynb`-Dateien) öffnen und Zellen ausführen
+
+- **Repository updaten:**
+  - Ordner in VSCode öffnen – `Terminal -> Neues Terminal`
+  - Im Terminal `git pull` ausführen
+å
