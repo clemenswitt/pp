@@ -3,7 +3,6 @@ import subprocess
 
 def convert_to_html(ipynb_file, output_dir):
     try:
-        # Führe den nbconvert-Befehl aus
         subprocess.run(
             ["jupyter-nbconvert", "--to", "html", "--output-dir", output_dir, ipynb_file],
             check=True
