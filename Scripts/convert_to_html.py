@@ -1,9 +1,6 @@
 import os
 import subprocess
 
-root_dir = os.getcwd()
-html_dir = os.path.join(root_dir, "HTML")
-
 def convert_to_html(ipynb_file, output_dir):
     try:
         # Führe den nbconvert-Befehl aus
@@ -15,7 +12,11 @@ def convert_to_html(ipynb_file, output_dir):
     except subprocess.CalledProcessError as e:
         print(f"Fehler bei der Konvertierung von {ipynb_file}: {e}")
 
-for root, dirs, files in os.walk(root_dir):
+root_dir = os.getcwd()
+notebook_dir = os.path.join(root_dir, 'Notebooks')
+html_dir = os.path.join(root_dir, "HTML")
+
+for root, dirs, files in os.walk(notebook_dir):
     for file in files:
         if file.endswith(".ipynb"):
             ipynb_path = os.path.join(root, file)
