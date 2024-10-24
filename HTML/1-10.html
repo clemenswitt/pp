@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>1-2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>1-10</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7510,57 +7510,42 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=80f203553165db3c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=200308f971114674">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Aufgabe-1.2-%E2%80%93-Konstruierbarkeit-eines-Dreiecks">Aufgabe 1.2 – Konstruierbarkeit eines Dreiecks<a class="anchor-link" href="#Aufgabe-1.2-%E2%80%93-Konstruierbarkeit-eines-Dreiecks">¶</a></h1><p>Was bedeutet “Konstruierbarkeit eines Dreiecks“? Erstellen Sie das Programm zwecks der Überprüfung von den Längen der drei Strecken eines Dreiecks. Zusätzlich sollen die Längen der drei Strecken eines Dreiecks per Tastatur eingegeben werden (die längste Strecke zuerst). Der Algorithmus soll überprüfen, ob das Dreieck konstruierbar ist. Wenn ja, dann soll das Dreieck noch auf</p>
+<h1 id="Aufgabe-1.10-%E2%80%93-Maclaurinsche-Reihen">Aufgabe 1.10 – Maclaurinsche Reihen<a class="anchor-link" href="#Aufgabe-1.10-%E2%80%93-Maclaurinsche-Reihen">¶</a></h1><p>Die Reihenentwicklung verwendet man in der numerischen Mathematik zwecks Annäherung von analytischen Funktionen durch Polynome n-ten Grades. Dabei wird jedes weitere Glied im Polynom immer kleiner.
+Im Folgenden sind die sogenannten <strong>Maclaurinschen Reihen</strong> für die vier Funktionen $e^x$, $sin(x)$, $cos(x)$, $ln(1+x)$ aufgeführt:</p>
 <ul>
-<li>Gleichseitigkeit,</li>
-<li>Gleichschenkligkeit und</li>
-<li>Rechtwinkligkeit</li>
+<li>$e^x = \sum_{n=0}^\infty \frac{x^n}{n!} = \frac{x^0}{0!} + \frac{x^1}{1!} + \frac{x^2}{2!} + ... \;$ für alle $x \in r$</li>
+<li>$sin(x) = \sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!} = \frac{x}{1!} - \frac{x^3}{3!} + \frac{x^5}{5!} \pm ... \;$ für alle $x \in r$</li>
+<li>$cos(x) = \sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!} = \frac{x^0}{0!} - \frac{x^2}{2!} + \frac{x^4}{4!} \pm ... \;$ für alle $x \in r$</li>
+<li>$ln(1+x) = \sum_{n=1}^\infty (-1)^{n+1}\frac{x^n}{n} = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + ... \;$ für $-1 &lt; x &lt; 1$</li>
 </ul>
-<p>überprüft werden. Diese vier Ergebnisse (Konstruierbarkeit, Gleichseitigkeit usw.) sind jeweils als eine Textzeile per printf(), print oder cout auszugeben. Nutzen Sie zum Test folgende Zahlenkombinationen für die drei Seiten:</p>
-<table>
+<p>Beschreiben Sie zwei iterative Algorithmen für die Reihenentwicklung der o.g. Funktionen zwecks Annäherung an die analytischen Funktionen in Form von NSD. Programmieren Sie diese Reihen als Funktionen mit den folgenden Namen: <code>expo()</code>, <code>sinu()</code>, <code>cosi()</code>, <code>loga()</code>. Verwenden Sie keine Standardfunktionen aus <code>math</code>, da die Lösung sonst trivial ist. Erweitern Sie das Programm um die alternative Berechnung mittels der Funktionen der Standardbibliothek und vergleichen (verifizieren) Sie Ihre Ergebnisse mit den vorherigen. Diskutieren Sie die Genauigkeit der Ergebnisse.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d0bcdea29b3a515c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Nassi-Shneiderman-Diagramme-%E2%80%93-Beispiel-$e%5Ex$:">Nassi-Shneiderman-Diagramme – Beispiel $e^x$:<a class="anchor-link" href="#Nassi-Shneiderman-Diagramme-%E2%80%93-Beispiel-$e%5Ex$:">¶</a></h3><table>
 <thead>
 <tr>
-<th>Seite A</th>
-<th>Seite B</th>
-<th>Seite C</th>
+<th style="text-align:center">Iterative Funktion</th>
+<th style="text-align:center">Rekursive Funktion</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>13</td>
-<td>5</td>
-<td>12</td>
-</tr>
-<tr>
-<td>11</td>
-<td>11</td>
-<td>11</td>
-</tr>
-<tr>
-<td>10</td>
-<td>6</td>
-<td>8</td>
-</tr>
-<tr>
-<td>17</td>
-<td>8</td>
-<td>15</td>
-</tr>
-<tr>
-<td>5</td>
-<td>4</td>
-<td>3</td>
-</tr>
-<tr>
-<td>20</td>
-<td>11</td>
-<td>11</td>
+<td style="text-align:center"><img alt="" src="../Assets/Export/1-10_iterative.png"/></td>
+<td style="text-align:center"><img alt="" src="../Assets/Export/1-10_recursive.png"/></td>
 </tr>
 </tbody>
 </table>
@@ -7568,17 +7553,17 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e6e0e35b2d1f36e5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e6317b67386420f3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Gegebene-Testdaten:">Gegebene Testdaten:<a class="anchor-link" href="#Gegebene-Testdaten:">¶</a></h3>
+<h3 id="Hilfsfunktion-zur-Berechnung-von-$n!$-definieren:">Hilfsfunktion zur Berechnung von $n!$ definieren:<a class="anchor-link" href="#Hilfsfunktion-zur-Berechnung-von-$n!$-definieren:">¶</a></h3><p>Zur Berechnung der ersten Glieder der gegebenen Maclaurinschen Reihen sollen keine Funktionen aus importierten Bibliotheken verwendet werden. Da die Berechnungsvorschriften der Reihen für $e^x$, $sin(x)$ und $cos(x)$ auf die Berechnung von Fakultäten angewiesen sind, soll zunächst die Hilfsfunktion <code>factorial(n)</code> definiert werden.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=256cc736c2f61314">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=cdd651e5ce108f55">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7586,36 +7571,26 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="n">testdaten</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
-<span class="p">]</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e8c5606095c14b5d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7f37f2ad61a2b0b5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Konstruierbarkeit-eines-Dreiecks-bestimmen">Konstruierbarkeit eines Dreiecks bestimmen<a class="anchor-link" href="#Konstruierbarkeit-eines-Dreiecks-bestimmen">¶</a></h2><p>Die Konstruierbarkeit eines Dreiecks kann mithilfe der <strong>Dreiecksungleichung</strong> bestimmt werden. Damit ein Dreieck konstruiert werden kann, müssen folgende Ungleichungen erfüllt sein:</p>
-<ul>
-<li>$a &lt; b + c$</li>
-<li>$b &lt; a + c$</li>
-<li>$c &lt; a + b$</li>
-</ul>
+<h3 id="Berechnungsvorschrift-der-Maclaurinschen-Reihe-f%C3%BCr-$e%5Ex$-definieren:">Berechnungsvorschrift der Maclaurinschen Reihe für $e^x$ definieren:<a class="anchor-link" href="#Berechnungsvorschrift-der-Maclaurinschen-Reihe-f%C3%BCr-$e%5Ex$-definieren:">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=initial_id">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=891ba2935f5861c4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7623,28 +7598,26 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">dreiecksungleichung</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">expo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">depth</span><span class="p">:</span> <span class="k">return</span> <span class="n">expo</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="n">n</span> <span class="o">/</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">sum</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1f2390ba9c470a7a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=51e0da0c48caeca2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Gleichseitigkeit">Gleichseitigkeit<a class="anchor-link" href="#Gleichseitigkeit">¶</a></h3><p>Damit ein Dreieck gleichseitig ist, müssen alle Seiten die gleiche Länge besitzen.</p>
-<ul>
-<li>Hierzu kann der Mehrfachvergleich <code>a == b == c</code> durchgeführt werden.</li>
-</ul>
+<h3 id="Berechnungsvorschrift-der-Maclaurinschen-Reihe-f%C3%BCr-$sin(x)$-definieren:">Berechnungsvorschrift der Maclaurinschen Reihe für $sin(x)$ definieren:<a class="anchor-link" href="#Berechnungsvorschrift-der-Maclaurinschen-Reihe-f%C3%BCr-$sin(x)$-definieren:">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c28a78893c9475ab">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=68410a25b297b3a9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7652,29 +7625,26 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">gleichseitigkeit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="o">==</span> <span class="n">c</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">sinu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">depth</span><span class="p">:</span> <span class="k">return</span> <span class="n">sinu</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">sum</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="n">n</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">sum</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9f385b812aec6cca">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=aaed2eb99f38ce4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Rechtwinkligkeit">Rechtwinkligkeit<a class="anchor-link" href="#Rechtwinkligkeit">¶</a></h3><p>Damit ein Dreieck rechtwinklig ist, muss der Satz des Pythagoras erfüllt sein: $c^2=a^2+b^2$. Die Variable $c$ steht hierbei für die Hypotenuse des Dreiecks. Da die Parameter <code>a</code>, <code>b</code> und <code>c</code> in beliebig übergeben werden können, ist zunächst die Ermittlung der Hypotenuse erforderlich.</p>
-<ul>
-<li>Hierzu kann die Buildin-Funktion <code>sorted()</code> verwendet werden. Ihr werden die Parameter <code>a</code>, <code>b</code> und <code>c</code> in Form einer Liste <code>[a, b, c]</code> übergeben. Die Funktion sortiert die Werte der Liste anschließend nach ihrer Größe. Da Python-Funktionen mehere Rückgabewerte liefern können, werden die Werte der sortierten anschließend auf die Variablen <code>a</code>, <code>b</code> und <code>c</code> zurückübertragen. Durch die Sortierung besitzt <code>c</code> nun sicher den größten Wert.</li>
-<li>Die Überprüfung des Satz des Pythagoras erfolgt nun durch die Quadrierung der Seitenlängen: <code>c**2 == a**2 + b**2</code>.</li>
-</ul>
+<h3 id="Berechnungsvorschrift-der-Maclaurinschen-Reihe-f%C3%BCr-$cos(x)$-definieren:">Berechnungsvorschrift der Maclaurinschen Reihe für $cos(x)$ definieren:<a class="anchor-link" href="#Berechnungsvorschrift-der-Maclaurinschen-Reihe-f%C3%BCr-$cos(x)$-definieren:">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ffeaddbedc1de856">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3a5a436be6960fd2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7682,26 +7652,26 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">rechtwinkligkeit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">])</span> <span class="c1"># C nun garantiert größter Wert -&gt; Hypotenuse</span>
-    <span class="k">return</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span> <span class="o">==</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">cosi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">depth</span><span class="p">:</span> <span class="k">return</span> <span class="n">cosi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">sum</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="n">n</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">)</span> <span class="o">/</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">n</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">sum</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e81b562b164ea9fd">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6a2266aafd648cf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Gleichschenkligkeit:">Gleichschenkligkeit:<a class="anchor-link" href="#Gleichschenkligkeit:">¶</a></h3><p>Damit ein Dreieck gleichschenklig ist, müssen mindestens zwei Seiten die gleiche Länge besitzen.</p>
+<h3 id="Berechnungsvorschrift-der-Maclaurinschen-Reihe-f%C3%BCr-$ln(1+x)$-definieren:">Berechnungsvorschrift der Maclaurinschen Reihe für $ln(1+x)$ definieren:<a class="anchor-link" href="#Berechnungsvorschrift-der-Maclaurinschen-Reihe-f%C3%BCr-$ln(1+x)$-definieren:">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5649a389fb2589b6">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f267da9a4a221ffc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7709,25 +7679,28 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">gleichschenkligkeit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">==</span> <span class="n">c</span> <span class="ow">or</span> <span class="n">a</span> <span class="o">==</span> <span class="n">c</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">loga</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">sum</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"x liegt außerhalb des Definitionsbereichs von ln(1+x)"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">"x liegt außerhalb des Definitionsbereichs der Maclaurinschen Reihe für ln(1+x)"</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">depth</span><span class="p">:</span> <span class="k">return</span> <span class="n">loga</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">sum</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">n</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sum</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=778656f934a2adb">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=70150e919677d82d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Testfunktion">Testfunktion<a class="anchor-link" href="#Testfunktion">¶</a></h3>
+<h3 id="Testdaten:">Testdaten:<a class="anchor-link" href="#Testdaten:">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6929b0dd36643734">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=264ea6b8fd425a25">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7735,41 +7708,11 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">dreiecksungleichung</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span> <span class="k">return</span> <span class="s1">'Kein Dreieck konstruierbar'</span>
-    <span class="k">if</span> <span class="n">gleichschenkligkeit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="ow">and</span> <span class="n">gleichseitigkeit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span> <span class="k">return</span> <span class="s1">'Das Dreieck ist gleichschenklig und gleichseitig'</span>
-    <span class="k">elif</span> <span class="n">gleichschenkligkeit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span> <span class="k">return</span> <span class="s1">'Das Dreieck ist gleichschenklig'</span>
-    <span class="k">elif</span> <span class="n">gleichseitigkeit</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span> <span class="k">return</span> <span class="s1">'Das Dreieck ist gleichseitig'</span>
-    <span class="k">else</span><span class="p">:</span> <span class="k">return</span> <span class="s1">'Das Dreieck ist nicht gleichschenklig und nicht gleichseitig'</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3b6450fcb04ab7bd">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Testfunktion-auf-Testdaten-anwenden">Testfunktion auf Testdaten anwenden<a class="anchor-link" href="#Testfunktion-auf-Testdaten-anwenden">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=52beb183487db03a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">test_all</span><span class="p">(</span><span class="n">dreiecke</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">dreieck</span> <span class="ow">in</span> <span class="n">dreiecke</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">(</span><span class="n">dreieck</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dreieck</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dreieck</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
-        
-<span class="n">test_all</span><span class="p">(</span><span class="n">testdaten</span><span class="p">)</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Abweichung der Funktion expo() für x = 2: </span><span class="si">{</span><span class="n">expo</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Abweichung der Funktion sinu() für x = π: </span><span class="si">{</span><span class="n">sinu</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Abweichung der Funktion cosi() für x = π/3: </span><span class="si">{</span><span class="n">cosi</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="w"> </span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Abweichung der Funktion loga() für x = 0.85: </span><span class="si">{</span><span class="n">loga</span><span class="p">(</span><span class="mf">0.85</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">math</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="mf">0.85</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> <span class="c1"># math.log1p(x) = ln(1+x)</span>
 </pre></div>
 </div>
 </div>
