@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>1-15</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>1-19</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7510,44 +7510,28 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=28e018f34f0528f5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d2ee1b46fe524bf8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Aufgabe-1.15-%E2%80%93-SI-konforme-Umwandlung-angloamerikanischer-Ma%C3%9Feinheiten">Aufgabe 1.15 – SI-konforme Umwandlung angloamerikanischer Maßeinheiten<a class="anchor-link" href="#Aufgabe-1.15-%E2%80%93-SI-konforme-Umwandlung-angloamerikanischer-Ma%C3%9Feinheiten">¶</a></h1><p>Erweitern Sie Ihr Programm aus Aufgabe 1.14 um die Umrechnung folgender angloamerikanischer Maßeinheiten:</p>
-<ul>
-<li>Fuß in dm,</li>
-<li>Yard in Meter,</li>
-<li>Meile in km,</li>
-<li>Ounces in Gramm,</li>
-<li>Pfund (lbs) in kg</li>
-</ul>
-<p><strong>Hinweis:</strong> Geben Sie das Ergebnis in tabellarischer Form unter Nutzung des Tabulators <code>\t</code> aus:</p>
-<table>
-<thead>
-<tr>
-<th>Nr.</th>
-<th>Nichtmetrische Eingabe</th>
-<th>Metrische (SI-) Ausgabe</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-<p>Ergänzen Sie das Programm um ein Eingabemenü, welches dem User erlaubt, die Maßeinheiten zu wählen sowie mehrere Werte einzugeben.</p>
+<h1 id="Aufgabe-1.19-%E2%80%93-Erde-,-Mond--und-Marsschwerkraft">Aufgabe 1.19 – Erde-, Mond- und Marsschwerkraft<a class="anchor-link" href="#Aufgabe-1.19-%E2%80%93-Erde-,-Mond--und-Marsschwerkraft">¶</a></h1><p>Die Mondschwerkraft beträgt etwa 17% der Erdschwerkraft. Schreiben Sie ein Programm, das eine Tabelle erstellt, die die Masse $m$ eines Gegenstandes, das entsprechende Gewicht auf der Erde <code>gerde</code> und das entsprechende Mondgewicht <code>gmond</code> zeigt. Geben Sie das Ergebnis in tabellarischer Form unter Nutzung des Tabulators <code>\t</code> aus. Nutzen Sie den Bereich 1 bis 500kg in 5kg-Schritten.</p>
+<p><strong>Hinweis:</strong> Das Gewicht wird berechnet über die Beziehung $Gewicht = Masse \cdot Beschleunigung$. Die Masse des Gegenstandes ist überall konstant. Die Normfallerdbeschleunigung $G_
+{Erde}= 9,81\frac{m}{s^2}$.</p>
+<p>Erweitern Sie das Programm um eine weitere Tabellenspalte, in der Sie das Marsgewicht <code>gmars</code> berechnen. Die Normalfallbeschleunigung auf dem Mars beträgt $G_
+{Mars}= 3,69\frac{m}{s^2}$.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=39d6947dadb4f04b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7e7b3459d147f711">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Dictionary-zur-Wertumrechnung">Dictionary zur Wertumrechnung<a class="anchor-link" href="#Dictionary-zur-Wertumrechnung">¶</a></h3>
+<h3 id="Definition-der-Funktion-zur-Berechnung-der-Gewichtskraft:">Definition der Funktion zur Berechnung der Gewichtskraft:<a class="anchor-link" href="#Definition-der-Funktion-zur-Berechnung-der-Gewichtskraft:">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7556,140 +7540,102 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="n">conversion_dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="s2">"ft"</span><span class="p">,</span> <span class="s2">"dm"</span><span class="p">,</span> <span class="mf">3.048</span><span class="p">],</span> <span class="c1"># Fuß -&gt; dm</span>
-    <span class="mi">2</span><span class="p">:</span> <span class="p">[</span><span class="s2">"yd"</span><span class="p">,</span> <span class="s2">"m"</span><span class="p">,</span> <span class="mf">.9144</span><span class="p">],</span> <span class="c1"># Yard -&gt; m</span>
-    <span class="mi">3</span><span class="p">:</span> <span class="p">[</span><span class="s2">"mi"</span><span class="p">,</span> <span class="s2">"km"</span><span class="p">,</span> <span class="mf">1.60934</span><span class="p">],</span> <span class="c1"># Meile -&gt; km</span>
-    <span class="mi">4</span><span class="p">:</span> <span class="p">[</span><span class="s2">"oz"</span><span class="p">,</span> <span class="s2">"g"</span><span class="p">,</span> <span class="mf">28.3495</span><span class="p">],</span> <span class="c1"># Unze -&gt; g</span>
-    <span class="mi">5</span><span class="p">:</span> <span class="p">[</span><span class="s2">"lb"</span><span class="p">,</span> <span class="s2">"kg"</span><span class="p">,</span> <span class="mf">.453592</span><span class="p">]</span> <span class="c1"># Pfund -&gt; kg </span>
-<span class="p">}</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="n">g_erde</span> <span class="o">=</span> <span class="mf">9.81</span>
+<span class="n">g_mond</span> <span class="o">=</span> <span class="mf">0.17</span> <span class="o">*</span> <span class="n">g_erde</span>
+<span class="n">g_mars</span> <span class="o">=</span> <span class="mf">3.69</span>
+
+<span class="k">def</span> <span class="nf">calc_fg</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span> <span class="o">*</span> <span class="n">g_erde</span><span class="p">,</span> <span class="n">m</span> <span class="o">*</span> <span class="n">g_mond</span><span class="p">,</span> <span class="n">m</span> <span class="o">*</span> <span class="n">g_mars</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b18c370e0149ddc7">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=14d2a191bc08cefc">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Funktion-zur-Wertumrechnung">Funktion zur Wertumrechnung<a class="anchor-link" href="#Funktion-zur-Wertumrechnung">¶</a></h3>
+<h3 id="Definition-der-Ausgabefunktion">Definition der Ausgabefunktion<a class="anchor-link" href="#Definition-der-Ausgabefunktion">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d230f90f2646955b">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=1883ebdda2d89b01">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">si_conversion</span><span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="n">conversion_dict</span><span class="p">[</span><span class="n">option</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">print_row</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\t\t\t</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">row</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6af5b2908f14dbf0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=621270ffd35106d2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Ausgabefunktion">Ausgabefunktion<a class="anchor-link" href="#Ausgabefunktion">¶</a></h3>
+<h3 id="Testschleife">Testschleife<a class="anchor-link" href="#Testschleife">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c7713dad6ef91fa2">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=fa1db2a4df456398">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">print_row</span><span class="p">(</span><span class="n">values</span><span class="p">):</span> <span class="c1"># Format values: [Nr., nichtmetrischer Wert, metrischer Wert]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\t\t\t</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">values</span><span class="p">)))</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">print_row</span><span class="p">([</span><span class="s2">"m [kg]"</span><span class="p">,</span> <span class="s2">"F Erde [N]"</span><span class="p">,</span> <span class="s2">"F Mond [N]"</span><span class="p">,</span> <span class="s2">"F Mars [N]"</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="n">print_row</span><span class="p">([</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">calc_fg</span><span class="p">(</span><span class="n">value</span><span class="p">)])</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6c700773f46de28">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bbefd059e7975fb6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Testfunktion">Testfunktion<a class="anchor-link" href="#Testfunktion">¶</a></h3>
+<h3 id="Alternative-Ausgabe-mithilfe-der-Bibliothek-PrettyTable">Alternative Ausgabe mithilfe der Bibliothek PrettyTable<a class="anchor-link" href="#Alternative-Ausgabe-mithilfe-der-Bibliothek-PrettyTable">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1fd44eb02d4926e3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3c56938edfd56ed8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="n">row_count</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">print_row</span><span class="p">([</span><span class="s2">"Nr."</span><span class="p">,</span> <span class="s2">"Nichtmetrische Eingabe"</span><span class="p">,</span> <span class="s2">"Metrische Ausgabe"</span><span class="p">])</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">option_input</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Wählen Sie eine Option: </span><span class="se">\n</span><span class="s2">"</span>
-                             <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">":    "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
-<span class="w">                                             </span><span class="nb">str</span><span class="p">(</span><span class="n">conversion_dict</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" -&gt; "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
-<span class="w">                                             </span><span class="nb">str</span><span class="p">(</span><span class="n">conversion_dict</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span>
-<span class="w">                                             </span><span class="k">for</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">conversion_dict</span><span class="p">])</span><span class="si">}</span><span class="s2">"</span><span class="p">))</span>
-
-    <span class="k">if</span> <span class="n">option_input</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">break</span>
-    
-    <span class="n">value_input</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Geben Sie einen Wert in </span><span class="si">{</span><span class="n">conversion_dict</span><span class="p">[</span><span class="n">option_input</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> ein: "</span><span class="p">))</span>
-
-    <span class="n">row_count</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">print_row</span><span class="p">([</span><span class="n">row_count</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">value_input</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">conversion_dict</span><span class="p">[</span><span class="n">option_input</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">si_conversion</span><span class="p">(</span><span class="n">option_input</span><span class="p">,</span><span class="w"> </span><span class="n">value_input</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">conversion_dict</span><span class="p">[</span><span class="n">option_input</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">])</span>
+<div class="highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">prettytable</span> <span class="kn">import</span> <span class="n">PrettyTable</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">()</span>
+<span class="n">table</span><span class="o">.</span><span class="n">field_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"m [kg]"</span><span class="p">,</span> <span class="s2">"F Erde [N]"</span><span class="p">,</span> <span class="s2">"F Mond [N]"</span><span class="p">,</span> <span class="s2">"F Mars [N]"</span><span class="p">]</span>
+<span class="n">values</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">([</span><span class="nb">round</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">calc_fg</span><span class="p">(</span><span class="n">value</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Nr.			Nichtmetrische Eingabe			Metrische Ausgabe
-1			100.0 ft			304.8 dm
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 14</span>
-<span class="ansi-green-intense-fg ansi-bold">     11</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> option_input <span style="color: rgb(98,98,98)">==</span> <span style="color: rgb(98,98,98)">0</span>:
-<span class="ansi-green-intense-fg ansi-bold">     12</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">break</span>
-<span class="ansi-green-fg">---&gt; 14</span> value_input <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">float</span>(<span style="color: rgb(0,135,0)">input</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Geben Sie einen Wert in </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span class="ansi-yellow-bg">conversion_dict</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">option_input</span><span class="ansi-yellow-bg">]</span>[<span style="color: rgb(98,98,98)">0</span>]<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> ein: </span><span style="color: rgb(175,0,0)">"</span>))
-<span class="ansi-green-intense-fg ansi-bold">     16</span> row_count <span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(98,98,98)">1</span>
-<span class="ansi-green-intense-fg ansi-bold">     17</span> print_row([row_count, <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>value_input<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>conversion_dict[option_input][<span style="color: rgb(98,98,98)">0</span>]<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">"</span>, <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>si_conversion(option_input,<span style="color: rgb(188,188,188)"> </span>value_input)<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>conversion_dict[option_input][<span style="color: rgb(98,98,98)">1</span>]<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">"</span>])
-
-<span class="ansi-red-fg">KeyError</span>: 200</pre>
 </div>
 </div>
 </div>
