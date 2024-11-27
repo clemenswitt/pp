@@ -12,7 +12,7 @@ def convert_to_html(ipynb_file, output_dir):
         print(f"Fehler bei der Konvertierung von {ipynb_file}: {e}")
 
 root_dir = os.getcwd()
-notebook_dir = os.path.join(root_dir, 'Notebooks')
+notebook_dir = os.path.join(root_dir, 'Jupyter Notebooks')
 html_dir = os.path.join(root_dir, "HTML")
 
 for root, dirs, files in os.walk(notebook_dir):

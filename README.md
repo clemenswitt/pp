@@ -5,6 +5,44 @@ Repository zu den Übungsaufgaben aus der Lehrveranstaltung "Programmierparadigm
 - **Jupyter-Notebooks:** [Quelldateien](https://github.com/clemenswitt/pp/tree/main/Notebooks), [HTML-Versionen](https://github.com/clemenswitt/pp/tree/main/HTML)
 - **NSD, PAP, UML:** [Quelldateien](https://github.com/clemenswitt/pp/tree/main/Assets/Struktogramme), [Bilder](https://github.com/clemenswitt/pp/tree/main/Assets/Export)
 
+### Übersicht Übungsaufgaben
+
+| Übungstermin | Aufgabe  | Lösung C  | Lösung C++ | Lösung Python |
+|:------------:|:--------:|:---------:|:----------:|:-------------:|
+|      1       | 1.1      |           |     ✅      |       ✅       |
+|              | 1.2      |           |     ✅      |       ✅       |
+|              | 1.3      |           |     ✅      |       ✅       |
+|              | 1.4      |           |     ✅      |       ✅       |
+|              | 1.5      |           |     ✅      |       ✅       |
+|      2       | 1.6      |           |     ✅      |       ✅       |
+|              | 1.7      |           |     ✅      |       ✅       |
+|              | 1.8      |           |     ✅      |       ✅       |
+|              | 1.9      |           |     ✅      |       ✅       |
+|              | 1.10     |           |     ✅      |       ✅       |
+|      3       | 1.11     |           |     ✅      |       ✅       |
+|              | 1.12     |           |     ✅      |       ✅       |
+|              | 1.13     |           |     ✅      |       ✅       |
+|              | 1.14     |           |     ✅      |       ✅       |
+|              | 1.15     |           |     ✅      |       ✅       |
+|      4       | 1.16     |           |     ✅      |       ✅       |
+|              | 1.17     |           |     ✅      |       ✅       |
+|              | 1.18     |           |     ✅      |       ✅       |
+|              | 1.19     |           |     ✅      |       ✅       |
+|              | 1.20     |           |     ✅      |       ✅       |
+|      5       | 1.21     |           |     ✅      |       ✅       |
+|              | 1.22     |           |     ✅      |       ✅       |
+|              | 1.23     |           |     ✅      |       ✅       |
+|              | 1.24     |           |     ✅      |       ✅       |
+|              | 1.25     |           |     ✅      |       ✅       |
+|              | 1.26     |           |     ✅      |       ✅       |
+|              | 1.27     |           |     ✅      |       ✅       |
+|      6       | 2.1      |     ✅    |     ✅      |               |
+|              | 2.2      |     ✅    |     ✅      |               |
+|              | 2.3      |     ✅    |     ✅      |               |
+|              | 2.4      |     ✅    |     ✅      |               |
+|              | 2.5      |     ✅    |     ✅      |               |
+
+
 ### Jupyter-Notebooks in Google Colab ausführen
 1. Google Colab öffnen: [https://colab.research.google.com/](https://colab.research.google.com/)
 2. Unter `Datei -> Notebook öffnen` Reiter `GitHub` auswählen
