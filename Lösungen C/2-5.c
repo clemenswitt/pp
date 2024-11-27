@@ -8,7 +8,7 @@ typedef struct {
     char surname[100];
     char phoneNumber[15]; // Internationale Maximallänge von Telefonnummern einschl. Ländercode
     char roomNumber[5];
-    int id[10];
+    int id;
 } Employee;
 
 /*
@@ -40,7 +40,7 @@ int getNumEntriesAvailable(Phonebook phoneBook) {
     int numEntries = sizeof(phoneBook.entries) / sizeof(phoneBook.entries[0]);
     int entriesOccupied = 0;
     for (int i = 0; i < numEntries; i++) {
-        if (*phoneBook.entries[i].id == -1) break;
+        if (phoneBook.entries[i].id == -1) break;
         else entriesOccupied++;
     }
     return numEntries - entriesOccupied;
@@ -63,8 +63,8 @@ int printEntries(Phonebook phoneBook) {
     printf("Nr.\tName\tNachname\tTel.\tZ-Nr.\tID\n");
 
     for (int i = 0; i < numEntries; i++) {
-        if (*phoneBook.entries[i].id == -1) break;
-        else printf("%d\t%s\t%s\t%s\t%s\t%d\n", i+1, phoneBook.entries[i].name, phoneBook.entries[i].surname, phoneBook.entries[i].phoneNumber, phoneBook.entries[i].roomNumber, *phoneBook.entries[i].id);
+        if (phoneBook.entries[i].id == -1) break;
+        else printf("%d\t%s\t%s\t%s\t%s\t%d\n", i+1, phoneBook.entries[i].name, phoneBook.entries[i].surname, phoneBook.entries[i].phoneNumber, phoneBook.entries[i].roomNumber, phoneBook.entries[i].id);
     }
     return 1; // 1 -> Success-Flag
 };
@@ -94,7 +94,7 @@ void addEntry(Phonebook *phoneBook) {
     printf("Zimmernummer: ");
     scanf(" %[^\n]", employee.roomNumber);
     printf("ID: ");
-    scanf("%d", employee.id);
+    scanf("%d", &employee.id);
 
     int numEntries = sizeof((*phoneBook).entries) / sizeof((*phoneBook).entries[0]);
 
