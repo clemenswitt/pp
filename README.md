@@ -42,6 +42,11 @@ Repository zu den Übungsaufgaben aus der Lehrveranstaltung "Programmierparadigm
 |              | 2.4      |     ✅    |     ✅      |               |
 |              | 2.5      |     ✅    |     ✅      |               |
 
+### Online C/C++-Laufzeitumgebungen
+- [OnlineGDB](https://www.onlinegdb.com/online_c_compiler)
+- [Programiz Online Compiler](https://www.programiz.com/cpp-programming/online-compiler)
+- [OneCompiler](https://www.onecompiler.com/cpp)
+- [Online-CPP](https://www.online-cpp.com/)
 
 ### Jupyter-Notebooks in Google Colab ausführen
 1. Google Colab öffnen: [https://colab.research.google.com/](https://colab.research.google.com/)
