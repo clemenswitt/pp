@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>1-27</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Einfuehrung Structs</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7510,36 +7510,58 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cf66c38a244961d4">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b876538c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Aufgabe-1.27-%E2%80%93-Analyse-von-Zufallstexten">Aufgabe 1.27 – Analyse von Zufallstexten<a class="anchor-link" href="#Aufgabe-1.27-%E2%80%93-Analyse-von-Zufallstexten">¶</a></h1><p>Belegen Sie ein <code>char</code>-Feld aus 300 Elementen mit zufällig gewählten numerischen Zeichenwerten zwischen 33 und 126. Generieren Sie diese Belegung über einen Zufallszahlengenerator. Geben Sie das Ergebnis aus.</p>
-<p>Erweitern Sie das Programm um das Sortieren des Feldes mittels Bubble Sort. Verdoppeln Sie im sortierten Feld die im Deutschen am häufigsten auftretenden Buchstaben:</p>
+<h1 id="Einf%C3%BChrung-in-Strukturen">Einführung in Strukturen<a class="anchor-link" href="#Einf%C3%BChrung-in-Strukturen">¶</a></h1><h3 id="Motivation-f%C3%BCr-den-Einsatz-von-Strukturen">Motivation für den Einsatz von Strukturen<a class="anchor-link" href="#Motivation-f%C3%BCr-den-Einsatz-von-Strukturen">¶</a></h3><p>Angenommen, es soll ein Programm entwickelt werden, das Informationen über einen Mitarbeiter speichert und verwaltet. Dabei stellt sich die zentrale Frage: Wie können diese Daten abgelegt werden?</p>
+<p>Eine Lösung könnte beispielsweise der folgende C++-Code sein:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ea9fab8e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-c++"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">wage</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">birthYear</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">birthMonth</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">birthDay</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cb2eef63">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Der beschriebene Ansatz weist mehrere Schwächen auf:</p>
 <ol>
-<li>E/e $\rightarrow$ 17,4%</li>
-<li>N/n $\rightarrow$ 9,78%</li>
-<li>I/i $\rightarrow$ 7,55%</li>
-<li>S/s $\rightarrow$ 7,27%</li>
+<li>Es müssten sieben einzelne Variablen verwaltet werden, was die Übersichtlichkeit deutlich beeinträchtigt.</li>
+<li>Der Kontext der Variablen ist nicht unmittelbar ersichtlich.</li>
+<li>Bei der Übergabe der Daten an eine Funktion müssten sieben separate Eingabeparameter definiert werden.</li>
+<li>Sollten die Daten durch eine Funktion zurückgegeben werden, stellt sich die Frage nach der Umsetzung, da Funktionen in C++ nur einen Rückgabewert liefern können.</li>
 </ol>
-<p>Geben Sie nach jedem 40. Zeichen das Zeichen <code>\n</code> aus. Ermitteln Sie die Anzahl von Großbuchstaben und Kleinbuchstaben, Ziffern, Sonderzeichen im Feld. Trennen Sie die Feldbelegung, Feldanalyse und Ergebnisausgabe in die separaten Funktionen.</p>
+<p>An dieser Stelle bieten Strukturen (Structs) eine elegante Lösung. Structs ermöglichen die Definition benutzerdefinierter Datentypen, die aus mehreren Datentypen bestehen.</p>
+<p>Ein Struct kann in C++ wie folgt definiert werden:</p>
+<h3 id="Definition-von-Structs">Definition von Structs<a class="anchor-link" href="#Definition-von-Structs">¶</a></h3>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=268e6038e6644d16">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Funktion-zur-Erstellung-einer-300-zuf%C3%A4llige-Integer-Werte-umfassenden-Liste">Funktion zur Erstellung einer 300 zufällige Integer-Werte umfassenden Liste<a class="anchor-link" href="#Funktion-zur-Erstellung-einer-300-zuf%C3%A4llige-Integer-Werte-umfassenden-Liste">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=initial_id">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=337d4f14">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7547,27 +7569,47 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight hl-c++"><pre><span></span><span class="c1">//normale Syntax in Cpp</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">MitarbeiterI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">wage</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">birthYear</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">birthMonth</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">birthDay</span><span class="p">;</span>
+<span class="p">};</span>
 
-<span class="k">def</span> <span class="nf">generate_random_array</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">min_val</span><span class="o">=</span><span class="mi">33</span><span class="p">,</span> <span class="n">max_val</span><span class="o">=</span><span class="mi">126</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_val</span><span class="p">,</span> <span class="n">max_val</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">)]</span>
+<span class="c1">//normale Syntax in C</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">title</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">wage</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">birthYear</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">birthMonth</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">birthDay</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="n">MitarbeiterII</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c305119c5cf97f7a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0d57f589">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Funktion-zur-Konvertierung-von-Integer-Werten-in-ASCII-Zeichen">Funktion zur Konvertierung von Integer-Werten in ASCII-Zeichen<a class="anchor-link" href="#Funktion-zur-Konvertierung-von-Integer-Werten-in-ASCII-Zeichen">¶</a></h3>
+<h3 id="Structs-in-C-und-Cpp">Structs in C und Cpp<a class="anchor-link" href="#Structs-in-C-und-Cpp">¶</a></h3><p>Beim Definieren von Structs gibt es Unterschiede zwischen C und C++.</p>
+<p>In der Programmiersprache C wird häufig <code>typedef struct</code> verwendet, um die Erstellung von Variablen mit benutzerdefinierten Datentypen zu vereinfachen. Ohne <code>typedef</code> müsste der vollständige Typname, einschließlich des Präfixes <code>struct</code>, bei jeder Verwendung angegeben werden, z. B. <code>struct MitarbeiterII</code>.</p>
+<p>In C++ ist diese zusätzliche Deklaration jedoch nicht erforderlich, da die Sprache automatisch eine vereinfachte Typdefinition bereitstellt. Der Präfix <code>struct</code> muss daher nicht explizit verwendet werden.</p>
+<p>Nachfolgend ein Beispiel für die Erstellung einer Variable mit einem benutzerdefinierten Datentyp in C:</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6194f8157d16160">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=084c160f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7575,25 +7617,16 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">to_ascii</span><span class="p">(</span><span class="n">int_arr</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">[</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">int_arr</span><span class="p">]</span>
+<div class="highlight hl-c++"><pre><span></span><span class="c1">//C erstellung: Das C ist hier nur für die Unterscheidung im Namen</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">MitarbeiterI</span><span class="w"> </span><span class="n">Steffen_C</span><span class="p">;</span>
+
+<span class="n">MitarbeiterII</span><span class="w"> </span><span class="n">Tobias_C</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4ee097ef5c9a06e9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Funktion-zur-Verdopplung-h%C3%A4ufig-auftretender-Zeichen-innerhalb-einer-%C3%BCbergebenen-Liste">Funktion zur Verdopplung häufig auftretender Zeichen innerhalb einer übergebenen Liste<a class="anchor-link" href="#Funktion-zur-Verdopplung-h%C3%A4ufig-auftretender-Zeichen-innerhalb-einer-%C3%BCbergebenen-Liste">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d3dd41c560d65459">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a68a474e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7601,27 +7634,26 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">double_common_chars</span><span class="p">(</span><span class="n">char_arr</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">char_arr</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">char_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"e"</span><span class="p">,</span> <span class="s2">"n"</span><span class="p">,</span> <span class="s2">"i"</span><span class="p">,</span> <span class="s2">"s"</span><span class="p">]:</span> <span class="n">char_arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">char_arr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> 
-    <span class="k">return</span> <span class="n">char_arr</span>
+<div class="highlight hl-c++"><pre><span></span><span class="c1">//Cpp Erstellung:</span>
+<span class="n">MitarbeiterI</span><span class="w"> </span><span class="n">Steffen</span><span class="p">;</span>
+<span class="n">MitarbeiterII</span><span class="w"> </span><span class="n">Tobias</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=41937fe677cf02cb">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=130eeab9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Funktion-%E2%80%93-BubbleSort-Algorithmus">Funktion – BubbleSort-Algorithmus<a class="anchor-link" href="#Funktion-%E2%80%93-BubbleSort-Algorithmus">¶</a></h3>
+<h3 id="%C3%84ndern-von-Attributen-innerhalb-einer-Struct">Ändern von Attributen innerhalb einer Struct<a class="anchor-link" href="#%C3%84ndern-von-Attributen-innerhalb-einer-Struct">¶</a></h3><p>Die in einer Struct definierten Variablen, wie z. B. <code>wage</code> oder <code>name</code>, werden als <strong>Member-Variablen</strong> bezeichnet. Um auf diese Variablen zuzugreifen oder deren Werte zu ändern, wird der sogenannte <strong><code>.</code>-Operator</strong> verwendet:</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=defcd25d58e79b65">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=780e4f7a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7629,29 +7661,33 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
-                <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">arr</span>
+<div class="highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="n">Tobias</span><span class="p">.</span><span class="n">wage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5000</span><span class="p">;</span><span class="w"> </span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Tobias</span><span class="p">.</span><span class="n">wage</span><span class="p">;</span>
+
+<span class="n">Tobias</span><span class="p">.</span><span class="n">wage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6500</span><span class="p">;</span><span class="w"> </span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Tobias</span><span class="p">.</span><span class="n">wage</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=54d3151d438835b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Funktion-zur-Aufteilung-einer-%C3%BCbergebenen-Liste-in-40-Elemente-umfassende-Sublisten">Funktion zur Aufteilung einer übergebenen Liste in 40 Elemente umfassende Sublisten<a class="anchor-link" href="#Funktion-zur-Aufteilung-einer-%C3%BCbergebenen-Liste-in-40-Elemente-umfassende-Sublisten">¶</a></h3>
+<h3 id="Initialisierung-einer-Struct">Initialisierung einer Struct<a class="anchor-link" href="#Initialisierung-einer-Struct">¶</a></h3><p>Analog zur Initialisierung primitiver Variablen können auch bei der Erstellung eines Struct-Objekts direkt Werte zugewiesen werden. Dies geschieht mithilfe von geschweiften Klammern <code>{}</code>, wobei die Werte in der Reihenfolge der <strong>Member-Variablen</strong> angegeben werden.  '</p>
+<p>Hinweis: Es ist möglich, einzelne Werte bei der Initialisierung auszulassen. In diesem Fall werden die nicht angegebenen Werte automatisch auf <code>0</code> (oder den entsprechenden Standardwert des Datentyps) gesetzt.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8ab7b7ca7cb9b501">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8ed58654">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7659,25 +7695,26 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">split_array</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">40</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">chunk_size</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">),</span> <span class="n">chunk_size</span><span class="p">)]</span>
+<div class="highlight hl-c++"><pre><span></span><span class="n">MitarbeiterI</span><span class="w"> </span><span class="n">Tobi</span><span class="w"> </span><span class="p">{</span><span class="s">"Tobi"</span><span class="p">,</span><span class="w"> </span><span class="s">"admin"</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">20000</span><span class="p">};</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Tobi</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">Tobi</span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Tobi</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Tobi</span><span class="p">.</span><span class="n">wage</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Tobi</span><span class="p">.</span><span class="n">birthYear</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9aa8bda0b720e490">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Funktion-zur-zeilenweisen-Ausgabe-von-Sublisten">Funktion zur zeilenweisen Ausgabe von Sublisten<a class="anchor-link" href="#Funktion-zur-zeilenweisen-Ausgabe-von-Sublisten">¶</a></h3>
+<h3 id="Copy">Copy<a class="anchor-link" href="#Copy">¶</a></h3><p>Es ist auch möglich eine Struct mit einer anderen Struct zu erstellen:</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e173455b32b6effc">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7685,25 +7722,29 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">print_n</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">sub_arr</span> <span class="ow">in</span> <span class="n">arr</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">sub_arr</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<div class="highlight hl-c++"><pre><span></span><span class="n">MitarbeiterI</span><span class="w"> </span><span class="n">m_1</span><span class="w"> </span><span class="p">{</span><span class="s">"M"</span><span class="p">,</span><span class="w"> </span><span class="s">"test"</span><span class="p">};</span>
+<span class="n">MitarbeiterI</span><span class="w"> </span><span class="n">m_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_1</span><span class="p">;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m_2</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m_2</span><span class="p">.</span><span class="n">title</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=afdfa78365157671">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Funktion-zum-Z%C3%A4hlen-von-Klein--&amp;-Gro%C3%9Fbuchstaben-sowie-Sonderzeichen-innerhalb-einer-%C3%BCbergebenen-Liste">Funktion zum Zählen von Klein- &amp; Großbuchstaben sowie Sonderzeichen innerhalb einer übergebenen Liste<a class="anchor-link" href="#Funktion-zum-Z%C3%A4hlen-von-Klein--&amp;-Gro%C3%9Fbuchstaben-sowie-Sonderzeichen-innerhalb-einer-%C3%BCbergebenen-Liste">¶</a></h3>
+<h3 id="%C3%9Cbergabe-von-Structs-an-Funktionen-in-C">Übergabe von Structs an Funktionen in C<a class="anchor-link" href="#%C3%9Cbergabe-von-Structs-an-Funktionen-in-C">¶</a></h3><p>Bei der Übergabe einer Struct an eine Funktion wird häufig ein Pointer (<code>*</code>) auf die Struct verwendet, um unnötige Kopien zu vermeiden und die Effizienz zu erhöhen. In diesem Zusammenhang kommt der <strong><code>-&gt;</code>-Operator</strong> zum Einsatz.</p>
+<p>Der <code>-&gt;</code>-Operator vereinfacht die Kombination aus Dereferenzierungsoperator (<code>*</code>) und Punktoperator (<code>.</code>). Er ermöglicht den direkten Zugriff auf die Member-Variablen der Struct über den Pointer. Die folgende Gleichung verdeutlicht die Funktionsweise:</p>
+<p><code>[StructPointer]-&gt;[MemberVar]</code> == <code>(*[StructPointer]).[MemberVar]</code></p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e2817136f425fc60">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7711,28 +7752,38 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">analyze_field</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="n">lower_case</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">letter</span><span class="o">.</span><span class="n">islower</span><span class="p">())</span>
-    <span class="n">upper_case</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="n">letter</span><span class="o">.</span><span class="n">isupper</span><span class="p">())</span>
-    <span class="n">special_char</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">arr</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">letter</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">letter</span><span class="o">.</span><span class="n">isdigit</span><span class="p">())</span>
-    <span class="k">return</span> <span class="n">lower_case</span><span class="p">,</span> <span class="n">upper_case</span><span class="p">,</span> <span class="n">special_char</span>
+<div class="highlight hl-c++"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">vector2D</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">skalarproduct</span><span class="p">(</span><span class="n">vector2D</span><span class="o">*</span><span class="w"> </span><span class="n">vector1</span><span class="p">,</span><span class="w"> </span><span class="n">vector2D</span><span class="o">*</span><span class="w"> </span><span class="n">vector2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">vector1</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vector2</span><span class="o">-&gt;</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vector1</span><span class="o">-&gt;</span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vector2</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">vector2D</span><span class="w"> </span><span class="n">vec1</span><span class="p">{</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">6.5</span><span class="w"> </span><span class="p">};</span>
+<span class="n">vector2D</span><span class="w"> </span><span class="n">vec2</span><span class="p">{</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">-3.0</span><span class="w"> </span><span class="p">};</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Das Skalarprodukt ist: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">skalarproduct</span><span class="p">(</span><span class="o">&amp;</span><span class="n">vec1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">vec2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1edd6863a7f45a37">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Funktionsaufruf">Funktionsaufruf<a class="anchor-link" href="#Funktionsaufruf">¶</a></h3>
+<h3 id="%C3%9Cbergabe-von-Structs-an-Funktionen-in-Cpp">Übergabe von Structs an Funktionen in Cpp<a class="anchor-link" href="#%C3%9Cbergabe-von-Structs-an-Funktionen-in-Cpp">¶</a></h3><p>In C++ ist es nicht notwendig, ein Struct-Objekt als Pointer zu übergeben. Stattdessen kann die Struct als Referenz übergeben werden, was durch den <strong><code>&amp;</code>-Operator</strong> geschieht. Diese Methode erlaubt es, auf das ursprüngliche Objekt zuzugreifen, ohne eine Kopie der Daten zu erstellen.</p>
+<p>Ein Vorteil der Übergabe als Referenz besteht darin, dass die übergebene Struct in der Funktion wie eine normale Variable behandelt werden kann, ohne den <code>-&gt;</code>-Operator verwenden zu müssen.</p>
+<p><strong>Wichtig:</strong> Bei der Übergabe als Referenz wird direkt auf das ursprüngliche Objekt zugegriffen. Änderungen, die in der Funktion vorgenommen werden, wirken sich daher unmittelbar auf das übergebene Objekt aus. Es erfolgt keine Kopie des Objekts.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e570fb6950f863e3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7740,11 +7791,80 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython2"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">to_ascii</span><span class="p">(</span><span class="n">generate_random_array</span><span class="p">())</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">double_common_chars</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="n">print_n</span><span class="p">(</span><span class="n">split_array</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Kleinbuchstaben: </span><span class="si">{</span><span class="n">analyze_field</span><span class="p">(</span><span class="n">arr</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> Großbuchstaben: </span><span class="si">{</span><span class="n">analyze_field</span><span class="p">(</span><span class="n">arr</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="se">\t</span><span class="s2"> Sonderzeichen: </span><span class="si">{</span><span class="n">analyze_field</span><span class="p">(</span><span class="n">arr</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<div class="highlight hl-c++"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">vector2D</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="nf">skalarprodukt</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">vector2D</span><span class="o">&amp;</span><span class="w"> </span><span class="n">vector1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector2D</span><span class="o">&amp;</span><span class="w"> </span><span class="n">vector2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">vector1</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vector2</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vector1</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">vector2</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">vector2D</span><span class="w"> </span><span class="n">vec1</span><span class="p">{</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">6.5</span><span class="w"> </span><span class="p">};</span>
+<span class="w">    </span><span class="n">vector2D</span><span class="w"> </span><span class="n">vec2</span><span class="p">{</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">-3.0</span><span class="w"> </span><span class="p">};</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"Das Skalarprodukt ist: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">skalarprodukt</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span><span class="w"> </span><span class="n">vec2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Ausgabe-von-Structs-in-C++">Ausgabe von Structs in C++<a class="anchor-link" href="#Ausgabe-von-Structs-in-C++">¶</a></h3><p>Die direkte Ausgabe von Structs auf der Konsole ist nicht ohne weiteres möglich, da der Stream-Operator <code>&lt;&lt;</code> in C++ nicht weiß, wie er mit einem benutzerdefinierten Datentyp umgehen soll. Um ein Struct auszugeben, müssen wir den Ausgabemechanismus explizit definieren.</p>
+<p>Es gibt zwei gängige Möglichkeiten, dies zu erreichen:</p>
+<ol>
+<li><p><strong>Verwendung einer <code>void</code>-Funktion (Prozedur):</strong><br/>
+Eine Möglichkeit besteht darin, eine separate Funktion zu definieren, die die einzelnen Elemente der Struct ausgibt. Diese Methode ist jedoch nicht besonders flexibel oder intuitiv, da sie für jede Struct einen eigenen Ausgabecode erfordert.</p>
+</li>
+<li><p><strong>Überladen des <code>&lt;&lt;</code>-Operators:</strong><br/>
+Eine elegantere Lösung ist das Überladen des <strong><code>&lt;&lt;</code>-Operators</strong> für die Struct. Dadurch können wir dem Operator mitteilen, wie er mit dem benutzerdefinierten Datentyp umgehen soll, sodass die Ausgabe über den Stream-Operator direkt möglich ist.</p>
+</li>
+</ol>
+<p>Beispiel für das Überladen des <code>&lt;&lt;</code>-Operators:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-c++"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">vector2D</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">//Möglichkeit 1:</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">printVector2D</span><span class="p">(</span><span class="n">vector2D</span><span class="o">&amp;</span><span class="w"> </span><span class="n">vector</span><span class="p">){</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"x: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vector</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">", y: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vector</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//Möglichkeit 2: Überladen des &lt;&lt;-Operators für die Ausgabe eines vector2D-Objekts</span>
+<span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span><span class="w"> </span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">vector2D</span><span class="o">&amp;</span><span class="w"> </span><span class="n">vector</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"x: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">", y: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">vector2D</span><span class="w"> </span><span class="n">vec</span><span class="p">{</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">6.5</span><span class="w"> </span><span class="p">};</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">vec</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span><span class="c1">// Ausgabe des Structs</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
