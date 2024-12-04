@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
+/*
+Funktion zur zeilenweisen Auswertung einer Textdatei
+@param fileName[] Pfad zur auszuwertenden Datei
+@param targetChar Gesuchtes Zeichen
+*/
 void readLines(char fileName[], char targetChar) {
     FILE *f = fopen(fileName, "r");
     char line[80+1];
@@ -15,6 +20,11 @@ void readLines(char fileName[], char targetChar) {
     fclose(f);
 }
 
+/*
+Funktion zur zeichenweisen Auswertung einer Textdatei
+@param fileName[] Pfad zur auszuwertenden Datei
+@param targetChar Gesuchtes Zeichen
+*/
 void readChars(char fileName[], char targetChar) {
     FILE *f = fopen(fileName, "r");
     int totalCharCount = 0, targetCharCount = 0;
@@ -29,6 +39,9 @@ void readChars(char fileName[], char targetChar) {
     fclose(f);
 }
 
+/*
+Main-Funktion
+*/
 int main() {
     char targetChar;
     printf("Gesuchter Buchstabe: ");
