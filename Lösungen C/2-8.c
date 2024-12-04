@@ -34,7 +34,7 @@ int main() {
     printf("Gesuchter Buchstabe: ");
     scanf(" %[^\n]", &targetChar);
     printf("[Zeilenweise Überprüfung] – ");
-    readLines("TEXT.txt", 's');
+    readLines("Resources/TEXT.txt", 's');
     printf("[Zeichenweise Überprüfung] – ");
-    readChars("TEXT.txt", 's');
+    readChars("Resources/TEXT.txt", 's');
 }

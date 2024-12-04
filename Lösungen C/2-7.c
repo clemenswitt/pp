@@ -11,7 +11,7 @@ Die verbleibende Zeichenkette wird anschließend auf dem Bildschirm ausgegeben.
 Auf diese Weise entfernt das Programm die ersten drei Zeichen jeder Zeile und gibt die restlichen Zeichen der Datei aus.
 */
 int main() {
-    FILE *f = fopen("MY_FRIENDS.txt", "r");
+    FILE *f = fopen("Resources/MY_FRIENDS.txt", "r");
     int index = 0;
     char line[30+1];
 
