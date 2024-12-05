@@ -57,6 +57,7 @@ void addNodeAt(Node* baseNode, int data, int index) {
     newNode->next = targetIndex->next;
     newNode->prev = targetIndex;
     targetIndex->next = newNode;
+    newNode->next->prev = newNode;
 }
 
 /*
