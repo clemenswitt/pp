@@ -39,7 +39,9 @@ Funktion zur Erweiterung einer Liste um einen weiteren Knoten
 @param data Wert des anzufügenden Knotens
 */
 void addNode(Node* baseNode, int data) {
-    findListHead(baseNode)->next = createNode(data);
+    Node* listHead = findListHead(baseNode);
+    listHead->next = createNode(data);
+    listHead->next->prev = listHead;
 }
 
 /*
