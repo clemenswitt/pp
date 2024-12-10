@@ -39,7 +39,7 @@ class Bruch {
 
     // Operatorüberladung für +
     Bruch operator+(const Bruch& other) const {
-        return Bruch(z * other.n + other.z * n, n * other.z);
+        return Bruch(z * other.n + other.z * n, n * other.n);
     }
 
     // Operatorüberladung für -
@@ -79,7 +79,7 @@ class Bruch {
     }
 
     // Ermittlung des ggT als Voraussetzung zum Kürzen
-    int ggT(int a, int b) {
+    int ggT(int a, int b) const {
         while (b != 0) {
             int temp = b;
             b = a % b;
@@ -88,7 +88,7 @@ class Bruch {
         return a;
     }
 
-    double dezimal() {
+    double dezimal() const {
         return double(z) / n;
     }
 

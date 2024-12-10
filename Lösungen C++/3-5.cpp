@@ -39,7 +39,7 @@ class Pferd : public Saeugetier {
     public:
         Pferd(int Te, int Tr, string F): Saeugetier(Te, Tr), Farbe(F) {}
 
-        void druck() {
+        void druck() const {
             cout << "Tempo:\t\t" << Tempo << "\nTragzeit:\t" << Tragzeit << "\nFarbe:\t\t" << Farbe << endl;
         }
 };
@@ -51,7 +51,7 @@ class Wolf : public Saeugetier {
     public:
         Wolf(int Te, int Tr, float B): Saeugetier(Te, Tr), Beisskraft(B) {}
 
-        void druck() {
+        void druck() const {
             cout << "Tempo:\t\t" << Tempo << "\nTragzeit:\t" << Tragzeit << "\nBeißkraft:\t" << Beisskraft << endl;
         }
 };
@@ -63,7 +63,7 @@ class Huhn : public Flugtier {
     public:
         Huhn(int Te, int Fl, int L) : Flugtier(Te, Fl), LegeDauer(L) {}
 
-        void druck() {
+        void druck() const {
             cout << "Tempo:\t\t" << Tempo << "\nFlügelspanne:\t" << Fluegelspanne << "\nLegedauer:\t" << LegeDauer << endl;
         }
 };
@@ -75,7 +75,7 @@ class Papagei : public Flugtier {
     public:
         Papagei(int Te, int Fl, int F) : Flugtier(Te, Fl), AnzahlFarben(F) {}
 
-        void druck() {
+        void druck() const {
             cout << "Tempo:\t\t" << Tempo << "\nFlügelspanne:\t" << Fluegelspanne << "\nAnzahl Farben:\t" << AnzahlFarben << endl;
         }
 };

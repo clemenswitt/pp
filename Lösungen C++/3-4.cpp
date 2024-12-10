@@ -10,13 +10,13 @@ class Konto {
         float dispo;
 
     public:
-        Konto(int kontonummer, int kundennummer, string inhaber) {
-            this->kontonummer = kontonummer;
-            this->kundennummer = kundennummer;
-            this->inhaber = inhaber;
-            this->betrag = 0;
-            this->dispo = 0;
-        }
+        Konto(int kontonummer, int kundennummer, string inhaber) :
+            kontonummer(kontonummer),
+            kundennummer(kundennummer),
+            inhaber(inhaber),
+            betrag(0),
+            dispo(0)
+            {}
 
         void setDispo(float d) {
             dispo = d;

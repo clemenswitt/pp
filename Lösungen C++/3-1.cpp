@@ -39,7 +39,7 @@ class Bruch {
 
     // Operatorüberladung für +
     Bruch operator+(const Bruch& other) const {
-        return Bruch(z * other.n + other.z * n, n * other.z);
+        return Bruch(z * other.n + other.z * n, n * other.n);
     }
 
     // Operatorüberladung für -
