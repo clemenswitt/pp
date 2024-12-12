@@ -10,6 +10,7 @@ class Fahrzeug {
         float kmStand;
 
     public:
+        // Konsturktor mit Initialisierungsliste
         Fahrzeug(int personen, float tankvolumen, float verbrauch, float aktTankinhalt, float kmStand) :
             personen(personen),
             tankvolumen(tankvolumen),
@@ -53,7 +54,7 @@ int main() {
     Fahrzeug bus = Fahrzeug(100, 200, 25, 120, 120000);
     Fahrzeug lkw = Fahrzeug(3, 200, 30, 180, 240000);
 
-
+    // Beispielausgabe it überladenem Shift-Operator
     pkw.fahren(3000);
     cout << pkw;
 }

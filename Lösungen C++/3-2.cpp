@@ -15,6 +15,7 @@ class Bruch {
       this->n = n;
     };
 
+    // Konstruktor mit Verweis auf bereits existierenden Bruch
     Bruch(const Bruch& b) {
       this->z = b.getZaehler();
       this->n = b.getNenner();
@@ -66,13 +67,14 @@ class Bruch {
         return os;
     }
 
-    // Kürzen von Brüchen
+    // Funktion zum Kürzen des Bruchs
     void kuerzen() {
         int t = ggT(z, n);
         z /= t;
         n /= t;
     }
 
+    // Funktion zum Erweitern des Bruchs
     void erweitern(int f) {
         z *= f;
         n *= f;
@@ -88,6 +90,7 @@ class Bruch {
         return a;
     }
 
+    // Funktion zur Ausgabe des Dezimalwert eines Bruchs
     double dezimal() const {
         return double(z) / n;
     }

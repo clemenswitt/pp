@@ -15,6 +15,7 @@ class Bruch {
       this->n = n;
     };
 
+    // Konstruktor mit Verweis auf bereits existierenden Bruch
     Bruch(const Bruch& b) {
       this->z = b.getZaehler();
       this->n = b.getNenner();

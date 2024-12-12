@@ -2,7 +2,7 @@
 #include <ostream>
 using namespace std;
 
-// Klassendefinitionen
+// Definition der Basisklasse "Tier"
 class Tier {
     protected:
         int Tempo;
@@ -32,6 +32,7 @@ class Flugtier : public Tier {
         Flugtier(int Te, int Fl) : Tier(Te), Fluegelspanne(Fl) {}
 };
 
+// Ergänzte Definition der Klasse "Pferd"
 class Pferd : public Saeugetier {
     protected:
         string Farbe;
@@ -44,6 +45,7 @@ class Pferd : public Saeugetier {
         }
 };
 
+// Ergänzte Definition der Klasse "Wolf"
 class Wolf : public Saeugetier {
     protected:
         float Beisskraft;
@@ -56,6 +58,7 @@ class Wolf : public Saeugetier {
         }
 };
 
+// Ergänzte Definition der Klasse "Huhn"
 class Huhn : public Flugtier {
     protected:
         int LegeDauer;
@@ -68,6 +71,7 @@ class Huhn : public Flugtier {
         }
 };
 
+// Ergänzte Definition der Klasse "Papagei"
 class Papagei : public Flugtier {
     protected:
         int AnzahlFarben;
