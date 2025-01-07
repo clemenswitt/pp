@@ -51,6 +51,11 @@ Repository zu den Übungsaufgaben aus der Lehrveranstaltung "Programmierparadigm
 |              |   3.3   |          |     ✅      |               |
 |              |   3.4   |          |     ✅      |               |
 |              |   3.5   |          |     ✅      |               |
+|      9       |   4.1   |          |            |       ✅       |
+|              |   4.2   |          |            |       ✅       |
+|              |   4.3   |          |            |       ✅       |
+|              |   4.4   |          |            |       ✅       |
+|              |   4.5   |          |            |       ✅       |
 
 
 ### Online C/C++-Laufzeitumgebungen
