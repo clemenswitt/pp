@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="lit1.xsl"?>
+<!DOCTYPE literaturverzeichnis SYSTEM "lit.dtd">
+<literaturverzeichnis>
+    <verweis>
+        <vorname>Henning</vorname>
+        <name>Behme</name>
+        <titel>XML in der Praxis</titel>
+        <datum>1998</datum>
+        <verlag>Addison Wesley</verlag>
+        <isbn>3-8273-1330-9</isbn>
+        <preis>99,85 DM</preis>
+    </verweis>
+    <verweis>
+        <vorname>Charles</vorname>
+        <name>Goldfarb</name>
+        <titel>XML Handbuch</titel>
+        <datum>1999</datum>
+        <verlag>Prentice Hall</verlag>
+        <isbn>3-8272-9575-0</isbn>
+        <preis>7,95 EUR</preis>
+    </verweis>
+    <verweis>
+        <vorname>Howard</vorname>
+        <name>Marks</name>
+        <titel>Mr. Nice</titel>
+        <datum>2000</datum>
+        <verlag>Grow!</verlag>
+        <isbn>3-5554-4532-9</isbn>
+        <preis>10,00 EUR</preis>
+    </verweis>
+    <verweis>
+        <vorname>Olaf</vorname>
+        <name>Thoralf</name>
+        <titel>Pictoplasma II</titel>
+        <datum>2001</datum>
+        <verlag>Die Gestalten-Verlag</verlag>
+        <isbn>3-8333-6473-5</isbn>
+        <preis>45,50 EUR</preis>
+    </verweis>
+    <verweis>
+        <vorname>Hermann</vorname>
+        <name>Koch</name>
+        <titel>Italien - Von Pizza und Wein</titel>
+        <datum>2005</datum>
+        <verlag>Besseresser</verlag>
+        <isbn>3-8334-3321-5</isbn>
+        <preis>20,00 EUR</preis>
+    </verweis>
+</literaturverzeichnis>

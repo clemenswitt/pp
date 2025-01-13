@@ -1,0 +1,8 @@
+<!ELEMENT telefonbuch (verweis*)>
+<!ELEMENT verweis (vorname, name, strasse, postleitzahl, ort)>
+
+<!ELEMENT vorname (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT strasse (#PCDATA)>
+<!ELEMENT postleitzahl (#PCDATA)>
+<!ELEMENT ort (#PCDATA)>

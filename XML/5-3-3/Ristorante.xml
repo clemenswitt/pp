@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="Ristorante.xsl"?>
+<root>
+  <Pizza>
+    <ID>01</ID>
+    <Typ>Tartufo</Typ>
+    <Zutaten>Mozarella, Artischocken, Oliven, Olivenöl, Zwibeln, getrocknete Tomaten</Zutaten>
+    <Size>L</Size>
+  </Pizza>
+  <Pizza>
+    <ID>02</ID>
+    <Typ>Al Capone</Typ>
+    <Zutaten>Schinken, Käse, Oliven, Olivenöl, Tomatensauce</Zutaten>
+    <Size>M</Size>
+  </Pizza>
+  <Pizza>
+    <ID>03</ID>
+    <Typ>Don Corleone</Typ>
+    <Zutaten>Funghi, Tonno, 4 Formaggi, Cipola</Zutaten>
+    <Size>XXL</Size>
+  </Pizza>
+  <Pasta>
+    <ID>101</ID>
+    <Name>Al Dente</Name>
+    <Zutaten>Nudel, Olivenöl, Tomatensauce, geriebener Parmesan</Zutaten>
+  </Pasta>
+  <Vino>
+    <ID>201</ID>
+    <Name>Primitivo</Name>
+    <Menge>Karafe</Menge>
+    <Typ>Rotwein, Zimmertemperatur</Typ>
+  </Vino>
+  <Vino>
+    <ID>202</ID>
+    <Name>Spumante</Name>
+    <Menge>Flasche</Menge>
+    <Typ>Rosato, "on ice"</Typ>
+  </Vino>
+  <Pasta>
+    <ID>122</ID>
+    <Name>Bolognese</Name>
+    <Zutaten>Nudel, Olivenöl, Hackfleisch, getrocknete Tomaten, Basilikum</Zutaten>
+  </Pasta>
+  <Vino>
+    <ID>232</ID>
+    <Name>Pino Grigio da Veneto</Name>
+    <Menge>Flasche</Menge>
+    <Typ>Blanco</Typ>
+  </Vino>
+  <Pasta>
+    <ID>133</ID>
+    <Name>Milano</Name>
+    <Zutaten>Fuzilli, Olivenöl, Mozarella, getrocknete Tomaten, Basilikum, Rosmarin, Prosciutto di Parma</Zutaten>
+  </Pasta>
+</root>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT root (Pizza, Pasta, Vino)>
+<!ELEMENT Pizza (ID, Name, Zutaten, Size)>
+<!ELEMENT Pasta (ID, Name, Zutaten)>
+<!ELEMENT Vino (ID, Name, Typ, Menge)>
+
+<!ELEMENT Typ (#PCDATA)>
+<!ELEMENT Size (#PCDATA)>
+<!ELEMENT ID (#PCDATA)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Zutaten (#PCDATA)>
+<!ELEMENT Menge (#PCDATA)>
+
+
+
+
+
+ 
+
+

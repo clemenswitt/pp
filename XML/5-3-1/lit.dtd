@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        
+<!ELEMENT literaturverzeichnis (verweis)+>
+        
+<!ELEMENT verweis (vorname,name,titel,datum,verlag,isbn,preis)>
+        
+<!ELEMENT vorname (#PCDATA)>
+        
+<!ELEMENT name (#PCDATA)>
+      
+<!ELEMENT titel (#PCDATA)>
+        
+<!ELEMENT datum (#PCDATA)>
+        
+<!ELEMENT verlag (#PCDATA)>
+        
+<!ELEMENT isbn (#PCDATA)>
+        
+<!ELEMENT preis (#PCDATA)>
