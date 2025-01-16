@@ -1,0 +1,4 @@
+<!ELEMENT telefonbuch (eintrag+)>
+<!ELEMENT eintrag (name, telefon)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT telefon (#PCDATA)>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="iso8859-1" ?>
-<!--telefonbuch.xml-->
+
 <?xml-stylesheet type="text/xsl" href="telefonbuch.xsl"?>
 <!DOCTYPE telefonbuch SYSTEM "telefonbuch.dtd">
-<!-- für XML mit CSS-->
-<!--<?xml-stylesheet type="text/css" href="telefonbuch.css"?>-->
+
 <telefonbuch>
 	<verweis>
 		<vorname>Max und Moritz</vorname>
@@ -24,7 +23,7 @@
 		<name>Peters</name>
 		<strasse>Sackgasse 1</strasse>
 		<postleitzahl>50823</postleitzahl>
-		<ort>K&#246;ln</ort>
+		<ort>Köln</ort>
 	</verweis>
 	<verweis>
 		<vorname>Max</vorname>
@@ -38,7 +37,7 @@
 		<name>Peters</name>
 		<strasse>Sackgasse 1</strasse>
 		<postleitzahl>50823</postleitzahl>
-		<ort>K&#246;ln</ort>
+		<ort>Köln</ort>
 	</verweis>
 	<verweis>
 		<vorname>Max</vorname>
@@ -52,7 +51,7 @@
 		<name>Peters</name>
 		<strasse>Sackgasse 1</strasse>
 		<postleitzahl>50823</postleitzahl>
-		<ort>K&#246;ln</ort>
+		<ort>Köln</ort>
 	</verweis>
 	<verweis>
 		<vorname>Max</vorname>
@@ -66,7 +65,7 @@
 		<name>Peters</name>
 		<strasse>Sackgasse 1</strasse>
 		<postleitzahl>50823</postleitzahl>
-		<ort>K&#246;ln</ort>
+		<ort>Köln</ort>
 	</verweis>
 	<verweis>
 		<vorname>Max</vorname>
@@ -80,6 +79,6 @@
 		<name>Peters</name>
 		<strasse>Sackgasse 1</strasse>
 		<postleitzahl>50823</postleitzahl>
-		<ort>K&#246;ln</ort>
+		<ort>Köln</ort>
 	</verweis>
 </telefonbuch>

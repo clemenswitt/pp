@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE telefonbuch SYSTEM "telefonbuch.dtd">
+<?xml-stylesheet type="text/xsl" href="telefonbuch-apply-templates.xsl"?>
+
+<telefonbuch>
+    <eintrag>
+        <name>Max Mustermann</name>
+        <telefon>01234-56789</telefon>
+    </eintrag>
+    <eintrag>
+        <name>Erika Musterfrau</name>
+        <telefon>98765-43210</telefon>
+    </eintrag>
+</telefonbuch>
