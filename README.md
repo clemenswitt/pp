@@ -2,9 +2,6 @@
 
 Repository zu den Übungsaufgaben aus der Lehrveranstaltung "Programmierparadigmen" für Lehramtsstudierende an der TU Dresden.
 
-- **Jupyter-Notebooks:** [Quelldateien](https://github.com/clemenswitt/pp/tree/main/Notebooks), [HTML-Versionen](https://github.com/clemenswitt/pp/tree/main/HTML)
-- **NSD, PAP, UML:** [Quelldateien](https://github.com/clemenswitt/pp/tree/main/Assets/Struktogramme), [Bilder](https://github.com/clemenswitt/pp/tree/main/Assets/Export)
-
 ### Übersicht Übungsaufgaben
 
 | Übungstermin | Aufgabe  |  C   | C++ | Python | XML | UML |
