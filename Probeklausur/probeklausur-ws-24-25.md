@@ -1,7 +1,8 @@
 # Aufgabe 1 – Programmierparadigmen und Sprachen
 
-![](assets/pkl-pp-01.png)
-## a) Ergänzen Sie das Organigramm sinnvoll
+![](../Assets/pkl-pp-01.png)
+### a) Ergänzen Sie das Organigramm sinnvoll
+- –
 ### b) Welche Programmiersprachen sollten erwähnt werden?
 - **Funktionale Sprachen:** Haskell, LISP, Clojure, Elexir
 - **Deklarative Sprachen:** SQL, XSLT, Prolog
