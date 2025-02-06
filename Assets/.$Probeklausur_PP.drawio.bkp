@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2025-02-06T09:07:45.306Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.6 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="tF6dwioKl9tL6CmGxwrY" version="24.4.6" type="device" pages="2">
+<mxfile host="Electron" modified="2025-02-06T09:07:39.118Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.6 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="Tc6ZgCMlY0GOHdUqhqKI" version="24.4.6" type="device" pages="2">
   <diagram name="A6-Klassen" id="785nGcrSNxGajZDmDZKU">
     <mxGraphModel dx="860" dy="578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -111,7 +111,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="pqkzzi9tSaaYNOzvJUCx" name="A6-Sequenz">
-    <mxGraphModel dx="2462" dy="1012" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="687" dy="282" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
